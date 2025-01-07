@@ -20,7 +20,7 @@ describe("Handle URL Parameters", () => {
 					case "devices":
 						return "device1,device2";
 					  case "startDate":
-						 return "2024-10-01";
+						 return "2024-10-27";
 					  case "endDate":
 						 return "2024-10-31";
 					  default:
@@ -39,7 +39,7 @@ describe("Handle URL Parameters", () => {
 		).toBe(true);
 		expect (
 			(screen.getByLabelText('Start Date') as HTMLInputElement).value
-		).toBe('2024-10-01');
+		).toBe('2024-10-27');
 		expect (
 			(screen.getByLabelText('End Date') as HTMLInputElement).value
 		).toBe('2024-10-31');

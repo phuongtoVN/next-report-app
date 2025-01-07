@@ -14,7 +14,7 @@ test('verify date filtering for UI', async ({ page }) => {
 
 	const startDate = page.locator('div').filter({ hasText: /^Start Date$/ }).getByRole('textbox');
 	const endDate = page.locator('div').filter({ hasText: /^End Date$/ }).getByRole('textbox');
-	await expect(startDate).toHaveValue("2024-10-27");
+	await expect(startDate).toHaveValue('2024-10-27');
 	await expect(endDate).toHaveValue('2024-10-29');
 	await expect(page.getByRole('main')).toContainText('Oct 27, 2024 - Oct 29, 2024');
 
