@@ -31,4 +31,4 @@ jobs:
 
     # Step 5: Run Unit Tests
     - name: Run Unit Tests
-      run: npm test
+      run: npm test npx playwriight test
