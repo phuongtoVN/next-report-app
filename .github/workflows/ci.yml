@@ -29,10 +29,16 @@ jobs:
     - name: Perform Build Check
       run: npm run build
 
-    # Step 5: Set up server
-    - name: Set up sercer
-      run: npm run dev npx wait-on http://localhost:3000
-      
+    # Step 5: Start Development Server in the Background
+    - name: Start Server
+      run: |
+        npm run start &
+        npx wait-on http://localhost:3000
+
     # Step 6: Run Unit Tests
     - name: Run Unit Tests
-      run: npm test npx playwright test
+      run: npm test
+
+    # Step 7: Run Playwright Tests
+    - name: Run Playwright Tests
+      run: npx playwright test
