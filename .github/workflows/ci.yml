@@ -20,10 +20,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '23'
-
+    
     # Step 3: Install Dependencies
     - name: Install Dependencies
-      run: npm install
+      run: npm install --legacy-peer-deps npx playwright install npm install
 
     # Step 4: Perform Build Check
     - name: Perform Build Check
