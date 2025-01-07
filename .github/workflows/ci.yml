@@ -15,30 +15,34 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
-    # Step 2: Setup Node.js on Windows
+    # Step 2: Setup Node.js
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '23'
-    
+        node-version: '18'
+
     # Step 3: Install Dependencies
     - name: Install Dependencies
-      run: npm install --legacy-peer-deps npx playwright install npm install
+      run: npm install --legacy-peer-deps
 
-    # Step 4: Perform Build Check
+    # Step 4: Install Playwright Browsers
+    - name: Install Playwright Browsers
+      run: npx playwright install
+
+    # Step 5: Perform Build Check
     - name: Perform Build Check
       run: npm run build
 
-    # Step 5: Start Development Server in the Background
+    # Step 6: Start Development Server in the Background
     - name: Start Server
       run: |
         npm run start &
         npx wait-on http://localhost:3000
 
-    # Step 6: Run Unit Tests
+    # Step 7: Run Unit Tests
     - name: Run Unit Tests
       run: npm test
 
-    # Step 7: Run Playwright Tests
+    # Step 8: Run Playwright Tests
     - name: Run Playwright Tests
       run: npx playwright test
