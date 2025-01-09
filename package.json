@@ -1,9 +1,12 @@
 {
   "name": "production-reports-2",
   "version": "0.1.0",
+  "homepage": "https://phuongtoVN.github.io/next-report-app",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -32,6 +35,7 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
+    "gh-pages": "^6.3.0",
     "jsdom": "^25.0.1",
     "postcss": "^8",
     "react": "^18.3.1",
