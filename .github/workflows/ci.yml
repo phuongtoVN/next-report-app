@@ -36,7 +36,7 @@ jobs:
     # Step 6: Start Development Server in the Background
     - name: Start Server
       run: |
-        npm run start &
+        npm run dev &
         npx wait-on http://localhost:3000
 
     # Step 7: Run Unit Tests

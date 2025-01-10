@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && echo 'nextreportpage.com' > ./out/CNAME",
     "deploy": "gh-pages -d out",
     "build": "next build",
     "start": "next start",
