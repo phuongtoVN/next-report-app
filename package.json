@@ -4,7 +4,7 @@
   "homepage": "https://phuongtoVN.github.io/next-report-app",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "predeploy": "npm run build && echo 'nextreportpage.com' > ./out/CNAME",
     "deploy": "gh-pages -d out",
     "build": "next build",
