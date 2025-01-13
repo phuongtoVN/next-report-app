@@ -6,9 +6,9 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/next-report-app/' : '',
-  basePath: isProd ? '/next-report-app' : '',
-  output: 'export'
+  // assetPrefix: isProd ? '/next-report-app/' : '',
+  // basePath: isProd ? '/next-report-app' : '',
+  
 };
 
 export default nextConfig;

@@ -10,6 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "serve": "serve -s out",
+    "export": "next export",
     "test": "vitest src/tests/vite.test.ts"
   },
   "dependencies": {
@@ -40,6 +42,7 @@
     "postcss": "^8",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "serve": "^14.2.4",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "vitest": "^2.1.8"
